@@ -7,8 +7,18 @@
     <body>
         <h1>Area de texto</h1>
         <br><br>
-        <input type="text" id ="area" placeholder="Escribe algo por aquí...">
+        <div>
+        <label for="area">Añade texto</label>
+        <br>
+        <input type="text" id ="area" placeholder="Escribe algo por aquí..." style ="width: 300px;">
         <br><br>
-        <input type="text" id="ultimoInput" placeholder="Aquí saldrá el ultimo texto escrito" readonly>
+      <button id ="enviar" onclick="mandarTexto()" style="width: 100px; height: 30px;">
+         Enviar
+      </button>
+      <br><br>
+      <textarea id="ultimoInput" readonly placeholder = "Aquí sale el ultimo texto escrito..." style = "resize: none;"></textarea>
+    </div>  
     </body>
+    <script src="Texto.js"></script>
+    
 </html>

@@ -1,0 +1,29 @@
+<!DOCTYtimeE html>
+<html>
+    <head>
+        <meta charset = "UTF-8">
+        <title>Reloj digital</title>
+    </head>
+    <body style ="text-align: center;" onload ="verTiempo()">
+        <h1>Reloj digital</h1>
+        <div id = "tiempo"></div> 
+            <br><br>
+            <button id = "alarma" onclick ="mostrarAlarma()" >Alarma</button>
+            <br><br>
+       <div id ="seleccionAlarma" hidden>
+         <label for = "seleccion">Selecciona la hora</label>
+         <br>
+            <p><b>hh:mm:ss</b></p>
+        <form >
+        <input type = "time" step = "1" id = "seleccion">
+        <br><br>
+        <button type="submit" id = "crear" onclick >Crear alarma</button>
+        <button id = "temporizador" onclick = "cuentaAtras()" type = "submit">Temporizador</button>
+        </form>
+        <div id = "div3" hidden></div>
+       </div>
+       
+    </body>
+    
+    <script src = "Reloj.js"></script>
+</html>
