@@ -5,6 +5,7 @@ let t = document.getElementById("tiempo");
 let selectTiempo = document.getElementById("seleccion"); 
 
 const divCA = document.getElementById("div3"); 
+let totalTempo; 
 
 
 //Para evitar que se recargue la pagina al darle a submit
@@ -57,25 +58,39 @@ function addZero (i) {
 
 }
 
+//Atributos que se usan en la cuentaAtras
+
 //Función de cuenta atrás para el temporizador
 function cuentaAtras(){  
     mostrarContenido(); 
+    const valorTempo = selectTiempo.value.split(":");
+    totalTempo = parseInt(valorTempo[0])*3600 + parseInt(valorTempo[1])*60 + parseInt(valorTempo[2]);
     contador(); 
 
-   //const horaReal = hoy.getHours() + " : " + hoy.getMinutes() + " : " + hoy.getSeconds(); 
+
 
 }; 
 
+
+//Creo un "vector" que me divide el string por el caracter :
+
 function contador(){
-    const hoy = new Date(); 
-    const temp = new Date("hoy.getYear()-hoy.getMonth()-hoy.getDay()TvalorTempo"); 
-const valorTempo = selectTiempo.value;
-console.log(temp)
-   /**for(i=0; i < valorTempo; i++){
-        divCA.innerHTML = valorTempo - i;
-        setTimeout(contador, 1000);
-  }
-  */
+    
+    let h = Math.floor(totalTempo/3600); 
+    let m = Math.floor((totalTempo % 3600)/60); 
+    let s = totalTempo % 60; 
+
+    h = addZero(h); 
+    m = addZero(m);
+    s = addZero(s);
+let restaTempo = --totalTempo;
+    divCA.innerHTML = h + " : " + m + " : " + s; 
+    
+
+    if(totalTempo >= 0){
+    setTimeout(contador,1000); 
+}
+  console.log(restaTempo)
 }
 
 
