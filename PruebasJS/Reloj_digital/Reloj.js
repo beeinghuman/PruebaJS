@@ -95,14 +95,10 @@ let restaTempo = --totalTempo;
 
 
 /**
- * Para el temporizador y la alarma debo usar setTimeout()
+ * Cuando se pulsa dos veces mostrar contenido varias veces
+ * esconde el contador pero sigue haciendo la cuenta atras 
+ * y luego salen valores negativos
  * 
- * Con la alarma hacer una comparación entre los valores introducidos 
- * Horas, minutos y segundos del sistema con los que se han introducido 
- * 
- * Temporizador: 
- * Crear bucle en el que vaya añadiendo horas, min, seg, hasta llegar 
- * al tiempo establecido
- * 
- * 
+ * Falta por hacer la alarma y poner los eventListener para que
+ * muestre una alerta
  */
